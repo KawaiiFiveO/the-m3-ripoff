@@ -1,0 +1,91 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+function disableForm(theform) {
+	if (document.all || document.getElementById) {
+		for (i = 0; i < theform.length; i++) {
+			var tempobj = theform.elements[i];
+			if (tempobj.type.toLowerCase() == "submit")
+				tempobj.disabled = true ;
+		}
+		return true;
+	}
+	else {
+		return true;
+	}
+}
+
+var subcount=0 ;
+function countsubmit() {
+	if (subcount == 0) {
+		subcount++ ;
+		return true ;
+	}
+	else {
+		alert("Your message has already been submitted.\nPlease wait.");
+		return false ;
+	}
+}
+
+function insimg() {
+	toins=prompt("Enter the URL for the image you would like inserted\n(example: http://members.roadfly.org/youruserid/yourpic.jpg)","") ;
+	if (toins!=null && toins!="") {
+		toins="\r[IMG]"+toins+"[/IMG]";
+		document.postreply.messagebody.value+=toins ;
+	}
+}
+
+function insimg2() {
+	list = document.postreply.webfiles ;
+	toins= list.options[list.selectedIndex].value ;
+	if (toins!=null && toins!="") {
+		toins="\r[IMG]"+toins+"[/IMG]";
+		document.postreply.messagebody.value+=toins ;
+	}
+}
+
+function insurl() {
+	toins=prompt("Enter the full URL for the link\n(example: http://www.roadfly.org/)","") ;
+	if (toins!=null && toins!="") {
+		toins2=prompt("Optional: enter the text to be displayed for the link\n(default will be \""+toins+"\")","") ;
+		if (toins2!= null && toins2!="") {
+			toins="\r[URL="+toins+"]"+toins2+"[/URL]";
+		}
+		else {
+			toins="\r[URL]"+toins+"[/URL]";
+		}
+		document.postreply.messagebody.value+=toins ;
+	}
+}
+
+
+}
+/*
+     FILE ARCHIVED ON 06:00:23 Aug 02, 2003 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:39:29 Jan 13, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.553
+  exclusion.robots: 0.022
+  exclusion.robots.policy: 0.013
+  esindex: 0.011
+  cdx.remote: 13.525
+  LoadShardBlock: 389.513 (3)
+  PetaboxLoader3.datanode: 358.574 (4)
+  load_resource: 73.938
+  PetaboxLoader3.resolve: 39.054
+*/
